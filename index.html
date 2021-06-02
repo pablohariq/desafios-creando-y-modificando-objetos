@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pablo 'hariq' Lizama">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+    </style>
+    <title>Consultorio</title>
+</head>
+<body>
+
+    <h1><i class="far fa-hospital"></i></h1>
+    <h1>Consultorio Namek</h1>
+    <p>Use la consola para ejecutar los métodos de la clase <span>Consultorio:</span></p>
+    <ul>
+        <li><p><span>Consultorio.mostrarPacientes()</span> devuelve los datos de todos los pacientes registrados en el consultorio.</p></li>
+        <li><p><span>Consultorio.encontrarPaciente(nombre)</span> entrega todos los datos del paciente que coincida con el nombre <span>nombre</span> (String), en caso de encontrarse en la lista de pacientes.</p></li>
+    </ul>
+    <p>Inicialmente el script cuenta con los siguientes datos de prueba:</p>
+    <div>
+    <span>const p1 = new Paciente("Brian", 123456789, 26, "Siempre tengo hambre"); <br>
+        const p2 = new Paciente("John", 2121213454, 32, "Sueño crónico");<br>
+        const p3 = new Paciente("cris", 555555555, 32, "Javascrisis");<br>
+        const p4 = new Paciente("Goku", 1555555, 16, "duermo poco");<br>
+        const p5 = new Paciente("Naruto", 250000, 16, "personalidades multiples");<br>
+        <br>
+        const pacientes = [p1,p2,p3,p4,p5]<br>
+        const consultorio = new Consultorio("Consultoria Namek", pacientes)</span>
+    </div>
+
+    <footer>
+        <p>Pablo Lizama,  2021</p>
+    </footer>
+
+<script src="consultorio.js"></script>
+</body>
+</html>
