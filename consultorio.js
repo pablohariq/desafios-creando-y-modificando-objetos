@@ -1,6 +1,6 @@
 function Consultorio(nombre, pacientes){
-    let _nombre = nombre;
-    let _pacientes = pacientes || []; //esto convierte pacientes en un atributo opcional
+    var _nombre = nombre;
+    var _pacientes = pacientes || []; //esto convierte pacientes en un atributo opcional
 
     Object.defineProperty(this,"_getNombre",{
         get: function(){return _nombre}
@@ -34,10 +34,10 @@ Consultorio.prototype.setPacientes = function(pacientes){
 
 function Paciente(nombre, rut, edad, diagnostico){
     //variables locales, así no podremos acceder a ellas desde la consola aunque sepamos el nombre
-    let _nombre = nombre;
-    let _rut = rut;
-    let _edad = edad;
-    let _diagnostico = diagnostico;
+    var _nombre = nombre;
+    var _rut = rut;
+    var _edad = edad;
+    var _diagnostico = diagnostico;
 
     Object.defineProperty(this,"_getNombre",{
         get: function(){return _nombre}
@@ -97,13 +97,13 @@ Paciente.prototype.setDiagnostico = function(diagnostico){
 //Función que muestra todos los pacientes registrados
 Consultorio.prototype.mostrarPacientes = function(){
     this.getPacientes().forEach(e => {
-        let datosPaciente = `${e.getNombre()} - ${e.getEdad()} - ${e.getRut()} - ${e.getDiagnostico()}`
+        var datosPaciente = `${e.getNombre()} - ${e.getEdad()} - ${e.getRut()} - ${e.getDiagnostico()}`
         console.log(datosPaciente)
     })
 }
 //creamos una función que busque entre los pacientes de consultorio, agregándola al prototipo de Consultorio
 Consultorio.prototype.encontrarPaciente = function(nombreBuscado){
-    const resultado = this.getPacientes().find(p => (p.getNombre() == nombreBuscado)) //resultado es un Paciente
+    var resultado = this.getPacientes().find(p => (p.getNombre() == nombreBuscado)) //resultado es un Paciente
     mensajeResultado = (resultado)
     ? `*Paciente encontrado* \n Nombre: ${resultado.getNombre()} - Edad: ${resultado.getEdad()} - Rut: ${resultado.getRut()} - Diagnóstico: ${resultado.getDiagnostico()}`
     : `Paciente no encontrado...`;
